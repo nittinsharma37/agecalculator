@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.date1label = New System.Windows.Forms.Label()
         Me.date2label = New System.Windows.Forms.Label()
@@ -43,11 +44,14 @@ Partial Class Form1
         'date1label
         '
         Me.date1label.AutoSize = True
+        Me.date1label.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.date1label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.date1label.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.date1label.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.date1label.Location = New System.Drawing.Point(52, 84)
         Me.date1label.Name = "date1label"
         Me.date1label.Padding = New System.Windows.Forms.Padding(10)
-        Me.date1label.Size = New System.Drawing.Size(90, 35)
+        Me.date1label.Size = New System.Drawing.Size(94, 35)
         Me.date1label.TabIndex = 1
         Me.date1label.Text = "Enter DOB : "
         Me.date1label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -55,17 +59,22 @@ Partial Class Form1
         'date2label
         '
         Me.date2label.AutoSize = True
+        Me.date2label.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.date2label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.date2label.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.date2label.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.date2label.Location = New System.Drawing.Point(52, 141)
         Me.date2label.Name = "date2label"
         Me.date2label.Padding = New System.Windows.Forms.Padding(10)
-        Me.date2label.Size = New System.Drawing.Size(140, 35)
+        Me.date2label.Size = New System.Drawing.Size(144, 35)
         Me.date2label.TabIndex = 2
         Me.date2label.Text = "Enter  Date to Know : "
         Me.date2label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.AppWorkspace
         Me.DateTimePicker1.Location = New System.Drawing.Point(241, 88)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(135, 23)
@@ -80,15 +89,17 @@ Partial Class Form1
         '
         'BtnCalculateAge
         '
+        Me.BtnCalculateAge.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BtnCalculateAge.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.BtnCalculateAge.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BtnCalculateAge.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnCalculateAge.ForeColor = System.Drawing.SystemColors.WindowFrame
         Me.BtnCalculateAge.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnCalculateAge.Location = New System.Drawing.Point(126, 193)
+        Me.BtnCalculateAge.Location = New System.Drawing.Point(154, 204)
         Me.BtnCalculateAge.Name = "BtnCalculateAge"
         Me.BtnCalculateAge.Size = New System.Drawing.Size(146, 30)
         Me.BtnCalculateAge.TabIndex = 5
         Me.BtnCalculateAge.Text = "Calculate Age"
-        Me.BtnCalculateAge.UseVisualStyleBackColor = True
+        Me.BtnCalculateAge.UseVisualStyleBackColor = False
         '
         'dateOutput
         '
@@ -102,6 +113,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.agecalculator.My.Resources.Resources.back
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(424, 326)
         Me.Controls.Add(Me.dateOutput)
         Me.Controls.Add(Me.BtnCalculateAge)
@@ -110,6 +123,7 @@ Partial Class Form1
         Me.Controls.Add(Me.date2label)
         Me.Controls.Add(Me.date1label)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(440, 365)
         Me.MinimumSize = New System.Drawing.Size(440, 365)
